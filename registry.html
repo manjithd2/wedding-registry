@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title>that1card | Wedding Registry</title>		
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700i,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/slider.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/registry_style.css">
+    <style type="text/css">
+    	.wedding-name{
+    		text-align: center;
+    		margin-top: 3%;
+    	}
+    	.wedding-name h2{
+    		font-family: "Playfair Display", serif;
+    		font-weight: bold;
+    		color: #333;
+    		margin: 0px;
+
+    	}
+
+    	.wedding-name img{
+    		width: 165px;
+    	}
+
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="wedding-name">
+			<img src="img/decor-1.png" >
+			<h2>WEDDING REGISTRY</h2>	
+			<img src="img/decor-2.png">
+			<ul>
+				<li><a href="#">STORY</a> / </li>
+				<li><a href="#">GALLERY</a> / </li>
+				<li><a href="#">REGISTRY</a> </li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div class="registry">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="col-md-4 registry-product">
+					<img src="img/package.jpeg" class="img-responsive">
+					<h3>Honeymoon to Bali</h3>
+					<h5>Very short description.</h5>
+					<div class="progress" style="height: 10px;margin-bottom:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+					  aria-valuemin="0" aria-valuemax="100" style="width:70%;background-color: #f99898">
+					    <span class="sr-only">70% Complete</span>
+					  </div>
+					</div>
+					<button>BUY</button>
+					<button onclick="show('popup2')">CONTRIBUTE</button>
+					
+					<div class="popup" id="popup2">
+					  <h3>Honeymoon to Bali</h3>
+					  
+					  <div class="progress" style="height: 10px;margin-bottom:30px;">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+					  aria-valuemin="0" aria-valuemax="100" style="width:70%;background-color: #f99898">
+					    <span class="sr-only">70% Complete</span>
+					  </div>
+					</div>
+					  <table style="width:100%">
+					  	<tr>
+					  		<td>Jill</td>
+					  		<td>50k ₹</td>
+					  	</tr>
+					  	<tr>
+					  		<td>Jack</td>
+					  		<td>50k ₹</td>
+					  	</tr>
+					  </table>
+						<button onclick="hide('popup2')">CLOSE</button>
+						<button>CONTRIBUTE</button>	
+					</div>
+
+				</div>	
+				
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+	$ = function(id) {
+	  return document.getElementById(id);
+	}
+
+	var show = function(id) {
+		$(id).style.display ='block';
+	}
+	var hide = function(id) {
+		$(id).style.display ='none';
+}
+</script>
+</body>
+</html>

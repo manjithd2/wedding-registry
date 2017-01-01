@@ -1,0 +1,167 @@
+header{
+	height: 100vh;
+	background-image:linear-gradient(
+    to bottom,
+    rgba(0,0,0, 0),
+    rgba(0,0,0, 0.45)
+  ), url("../img/bg.jpg");
+	background-size: cover;
+	color: white;
+	text-align: center;
+}
+
+header h2{
+	font-family: 'Playfair Display';
+	font-size: 70px;
+	margin: 10px;
+
+}
+
+
+.wedding-name{
+	margin-top: 15%;
+}
+
+.wedding-name li{
+	display: inline;
+	font-family: 'Playfair Display';
+	font-size: 20px;
+	letter-spacing: 6px;
+}
+
+.wedding-name ul{
+	margin-top: 25px;
+}
+
+
+.wedding-name a {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+}
+
+.wedding-name a:hover {
+  color:#333;
+}
+
+.wedding-name a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f9b9b9;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.wedding-name a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+.registry{
+	margin-top: 50px;
+}
+
+.registry-product{
+	font-family: 'Libre Baskerville', serif;
+	/*border:1px solid #E8E8E8;*/
+	padding-top: 15px;
+	height: 400px;
+	margin-bottom: 40px;
+}
+
+.registry-product button{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #E86C6C;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 3px;
+	padding: 10px;
+	border: none;
+	width: 49%;
+	font-size:16px;
+	/*transition: all 0.5s;*/
+}
+
+.registry-product button:hover{
+	background-color: #f9b9b9;
+
+}
+
+.registry-product h3{
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+.registry-product a{
+	text-decoration: none;
+	color: #797979;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+}
+
+.registry-product h5{
+		margin-bottom: 20px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 500px;
+  height: 400px;
+  overflow: scroll;
+  left: 45%;
+  margin-left: -150px;
+  top: 40%;
+  margin-top: -100px;
+  background: #FFF;
+  z-index: 20;
+  padding: 20px;
+}
+
+.popup table{
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.popup table td{
+	padding-bottom: 15px;
+}
+
+
+#popup1 {
+  -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+}
+
+#popup2:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#popup2:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+}
