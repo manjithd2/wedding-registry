@@ -279,3 +279,14 @@ padding-bottom: 50px;
   margin: 0 auto;
   display: block;
 }
+
+
+@media screen and (max-width: 360px){
+  .wedding-name li{
+    display: block;
+  }
+
+  .registry-product button{
+    font-size: 12px;
+  }
+}
