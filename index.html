@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/validator.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/registry_style.css">
     <style type="text/css">
 
@@ -67,6 +67,28 @@
 			color: white;
 		}
 
+		.popup{
+			top: 20%;
+		}
+
+		.popup {
+		  display: none;
+		  position: fixed;
+		  padding: 10px;
+		  width: 500px;
+		  height: 600px;
+		  overflow: scroll!important;
+		  left: 45%;
+		  margin-left: -150px;
+		  top: 20%;
+		  margin-top: -100px;
+		  background: #FFF;
+		  z-index: 20;
+		  padding: 20px;
+		}
+
+
+
     </style>
 </head>
 <body>
@@ -78,17 +100,85 @@
 			<img src="img/decor-white-2.png" width="281" height="51">
 			<ul>
 				<li><a href="index.html">STORY</a> / </li>
-				<li><a href="#">GALLERY</a> / </li>
+				<li><a href="invitation.html">INVITATION</a> / </li>
+				<li><a href="#" onclick="show('popup2')" >RSVP</a> / </li>
+				<li><a href="guest-book.html">GUESTBOOK</a> / </li>
+				<li><a href="gallery.html">GALLERY</a> / </li>
 				<li><a href="registry.html">REGISTRY</a> </li>
 			</ul>
 		</div>
-		
+
+
 	</div>
-</header>
-	<div class="container">
+	<script>
 		
+	</script>
+</header>
+
+	<div class="popup rsvp" id="popup2" style="overflow: scroll;">
+					    <img src="img/decor-1.png" >
+						<h2>RSVP</h2>	
+						<img src="img/decor-2.png">
+					 	<form data-toggle="validator" role="form">
+						  <div class="form-group">
+						    <label for="inputName" class="control-label">Name</label>
+						    <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputNumber" class="control-label">Number</label>
+						    <input type="text" class="form-control" id="inputNumber" placeholder="9989716468" required>
+						  </div>
+						   <div class="form-group">
+						    <label for="inputAddress" class="control-label">Address</label>
+						    <textarea type="text" class="form-control" id="inputAddress" placeholder="Address6468" required></textarea>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputEmail" class="control-label">Email</label>
+						    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+						    <div class="help-block with-errors"></div>
+						  </div>
+						  <div class="form-group">
+						    <div class="radio">
+						      <label>
+						        <input type="radio"required>
+						        Veg
+						      </label>
+						    </div>
+						    <div class="radio">
+						      <label>
+						        <input type="radio" required>
+						        Non-Veg
+						      </label>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="checkbox">
+						      <label>
+						        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+						        Check yourself
+						      </label>
+						      <div class="help-block with-errors"></div>
+						    </div>
+						  </div>
+						  <div class="form-group" style="margin:0 auto;">
+						    <button type="submit" class="btn btn-primary">CONFIRM</button>
+						  	<button class="btn btn-primary" onclick="hide('popup2')">CLOSE</button>
+						  </div>
+						</form>
 	</div>
 
+	<script type="text/javascript">
+	$ = function(id) {
+	  return document.getElementById(id);
+	}
+
+	var show = function(id) {
+		$(id).style.display ='block';
+	}
+	var hide = function(id) {
+		$(id).style.display ='none';
+	}
+	</script>
 
 
 </body>

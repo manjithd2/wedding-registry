@@ -36,7 +36,7 @@
 	<div class="container">
 		<div class="wedding-name">
 			<img src="img/decor-1.png" >
-			<h2>WEDDING REGISTRY</h2>	
+			<h2>GUEST BOOK</h2>	
 			<img src="img/decor-2.png">
 			<ul>
 				<li><a href="index.html">STORY</a> / </li>
@@ -50,58 +50,46 @@
 		
 	</div>
 
-	<div class="registry">
-		<div class="container">
-			<div class="col-md-12">
-				<div class="col-md-4 registry-product">
-					<img src="img/package.jpeg" class="img-responsive">
-					<h3>Honeymoon to Bali</h3>
-					<h5>Very short description.</h5>
-					<div class="progress" style="height: 10px;margin-bottom:30px;">
-					  <div class="progress-bar" id="pro-bar"  role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%; background-color: #f99898">
-					    <span class="sr-only">70% Complete</span>
-					  </div>
+	<div class="container">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="guest-book">
+					<div class="row">
+						<h4>Jane Doe</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<span class="date-time">Thursday, 06/07/16</span>	
 					</div>
-					<button id="buy">BUY</button>
-					<script>
-						$(document).ready(function(){
-							// console.log(jQuery('#pro-bar')[0].style.width);
-							if(jQuery('#pro-bar').get(0).style.width > "40%")
-							{
-								jQuery('#buy').css('display','none');
-							}
 
+					<div class="row">
+						<h4>Jane Doe</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-						});
-					</script>
-					<button onclick="show('popup2')">CONTRIBUTE</button>
+						<img class ="img-responsive" src="img/package.jpeg">
+
+						<span class="date-time">Thursday, 06/07/16</span>	
+					</div>
+
+					<div class="row">
+						<h4>Jane Doe</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<span class="date-time">Thursday, 06/07/16</span>	
+					</div>
 					
-					<div class="popup" id="popup2">
-					  <h3>Honeymoon to Bali</h3>
-					  
-					  <div class="progress" style="height: 10px;margin-bottom:30px;">
-					  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-					  aria-valuemin="0" aria-valuemax="100" style="width:70%;background-color: #f99898">
-					    <span class="sr-only">70% Complete</span>
-					  </div>
-					</div>
-					  <table style="width:100%">
-					  	<tr>
-					  		<td>Jill</td>
-					  		<td>50k ₹</td>
-					  	</tr>
-					  	<tr>
-					  		<td>Jack</td>
-					  		<td>50k ₹</td>
-					  	</tr>
-					  </table>
-						<button onclick="hide('popup2')">CLOSE</button>
-						<button>CONTRIBUTE</button>	
-					</div>
-
-				</div>	
-				
-			</div>
+				</div>
 		</div>
 	</div>
 
