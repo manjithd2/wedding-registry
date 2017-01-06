@@ -3,12 +3,16 @@
 <head>
 		<title>that1card | Wedding Registry</title>		
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hind:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700i,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/validator.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/registry_style.css">
     <style type="text/css">
     	.wedding-name{
@@ -38,7 +42,7 @@
 			<ul>
 				<li><a href="index.html">STORY</a> / </li>
 				<li><a href="invitation.html">INVITATION</a> / </li>
-				<li><a href="index.html" >RSVP</a> / </li>
+				<li><a href="#" onclick="show('rsvp-1')" >RSVP</a> / </li>
 				<li><a href="guest-book.html">GUESTBOOK</a> / </li>
 				<li><a href="gallery.html">GALLERY</a> / </li>
 				<li><a href="registry.html">REGISTRY</a> </li>
@@ -92,8 +96,31 @@
 					  		<td>50k ₹</td>
 					  	</tr>
 					  </table>
-						<button onclick="hide('popup2')">CLOSE</button>
-						<button>CONTRIBUTE</button>	
+					  <div>
+					  	<form data-toggle="validator" role="form">
+						  <div class="form-group">
+						  	<div class="form-group">
+						    <label for="inputAmount" class="control-label">Amount</label>
+						    <input type="text" class="form-control" id="inputAmount" placeholder="Enter the amount to contribute" required>
+						  </div>
+						    <label for="inputName" class="control-label">Name</label>
+						    <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputNumber" class="control-label">Number</label>
+						    <input type="text" class="form-control" id="inputNumber" placeholder="9989716468" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputEmail" class="control-label">Email</label>
+						    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+						    <div class="help-block with-errors"></div>
+						  </div>
+						  <div class="form-group" style="margin:0 auto;">
+						    <button type="submit" class="btn btn-primary">CONTRIBUTE</button>
+						  	<button class="btn btn-primary" onclick="hide('popup2')">CLOSE</button>
+						  </div>
+						  </form>
+					  </div>
 					</div>
 
 				</div>	
@@ -102,6 +129,57 @@
 		</div>
 	</div>
 
+	<div class="popup rsvp" id="rsvp-1" style="overflow: scroll;">
+					    <img src="img/decor-1.png" >
+						<h2>RSVP</h2>	
+						<img src="img/decor-2.png">
+					 	<form data-toggle="validator" role="form">
+						  <div class="form-group">
+						    <label for="inputName" class="control-label">Name</label>
+						    <input type="text" class="form-control" id="inputName" placeholder="Cina Saffary" required>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputNumber" class="control-label">Number</label>
+						    <input type="text" class="form-control" id="inputNumber" placeholder="9989716468" required>
+						  </div>
+						   <div class="form-group">
+						    <label for="inputAddress" class="control-label">Address</label>
+						    <textarea type="text" class="form-control" id="inputAddress" placeholder="Address6468" required></textarea>
+						  </div>
+						  <div class="form-group">
+						    <label for="inputEmail" class="control-label">Email</label>
+						    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
+						    <div class="help-block with-errors"></div>
+						  </div>
+						  <div class="form-group">
+						    <div class="radio">
+						      <label>
+						        <input type="radio"required>
+						        Veg
+						      </label>
+						    </div>
+						    <div class="radio">
+						      <label>
+						        <input type="radio" required>
+						        Non-Veg
+						      </label>
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="checkbox">
+						      <label>
+						        <input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
+						        Check yourself
+						      </label>
+						      <div class="help-block with-errors"></div>
+						    </div>
+						  </div>
+						  <div class="form-group" style="margin:0 auto;">
+						    <button type="submit" class="btn btn-primary">CONFIRM</button>
+						  	<button class="btn btn-primary" onclick="hide('rsvp-1')">CLOSE</button>
+						  </div>
+						</form>
+	</div>
 
 <script type="text/javascript">
 	$ = function(id) {
