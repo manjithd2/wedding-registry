@@ -9,7 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Invitation Dashboard</title>
+    <title>Story Dashboard</title>
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/sb-admin.css" rel="stylesheet">
@@ -170,39 +174,43 @@
         </nav>
 
         <div id="page-wrapper" style="height: 100vh">
-
             <div class="container-fluid">
+            <fieldset>
+            <form name="myForm" method="POST">
+                 <div id="dynamicInputs">
+                     Add fields for RSVP
+                 </div>
+                 <p>
+                 <select name="inputSelect">
+                     <option value="text">text field</option>
+                     <option value="radio">radio</option>
+                     <option value="checkbox">checkbox</option>
+                     <option value="textarea">textarea</option>
+                 </select>
+                 <input type="button" value="Add another input" onClick="addAllInputs('dynamicInputs', document.myForm.inputSelect.value);">
+                </p>
+            </form>
+            </fieldset>
 
-                
-               <form data-toggle="validator" role="form">
+            <!--     <input type="hidden" name="count" value="1" />
+        <div class="control-group" id="fields">
+            <label class="control-label" for="field1">Nice Multiple Form Fields</label>
+            <div class="controls" id="profs"> 
+                <form class="input-append">
+                    <div id="field"><input autocomplete="off" class="input" id="field1" name="prof1" type="text" placeholder="Type something" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                </form>
+            <br>
+            <small>Press + to add another form field :)</small>
+            </div>
+        </div> -->
+               <!-- <form data-toggle="validator" role="form">
+                          <div class="input_fields_wrap">
+                                <button class="add_field_button">Add More Fields</button>
+                                <div><input type="text" name="mytext[]"></div>
+                            </div>
                           <div class="form-group">
-                            <label for="invite" class="control-label">Invite Link</label>
-                            <input type="text" class="form-control" name="invite" id="inputinvite" placeholder="">
-                          </div>
-                          <h4>Add wedding functions</h4>
-                           <div class="form-group">
-                            <label for="event-name" class="control-label">Event Name</label>
-                            <input type="text" class="form-control" name="event-name" id="event-name" placeholder="" required>
-                          </div>
-                           <div class="form-group">
-                            <label for="event-day" class="control-label">Event Day</label>
-                            <input type="text" class="form-control" name="event-day" id="event-day" placeholder="Enter the event day" required>
-                          </div>
-                            <div class="form-group">
-                            <label for="event-date" class="control-label">Event Date</label>
-                            <input type="text" class="form-control" name="event-date" id="event-date" placeholder="Enter the event date" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="event-time" class="control-label">Event Time</label>
-                            <input type="text" class="form-control" name="event-time" id="event-time" placeholder="Enter the event time (start and end)" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="event-address" class="control-label">Event Address</label>
-                            <input type="text" class="form-control" name="event-address" id="event-address" placeholder="Enter the event address" required>
-                          </div>
-                          <div class="form-group">
-                            <label for="event-map" class="control-label">Event map</label>
-                            <input type="text" class="form-control" name="event-map" id="event-map" placeholder="Enter the google maps link for VIEW MAP" required>
+                            <label for="inputName" class="control-label">Couple Name</label>
+                            <input type="text" class="form-control" name="name" id="inputName" placeholder="" required>
                           </div>
                            <div class="form-group">
                             <label for="exampleInputFile">Picture for Background</label>
@@ -212,7 +220,7 @@
                             <button type="submit" class="btn btn-primary">SAVE</button>
                           </div>
                           
-                        </form>
+                        </form> -->
 
             </div>
             <!-- /.container-fluid -->
@@ -222,12 +230,41 @@
 
     </div>
     <!-- /#wrapper -->
-
+     </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    var counterText = 0;
+    var counterRadioButton = 0;
+    var counterCheckBox = 0;
+    var counterTextArea = 0;
+    function addAllInputs(divName, inputType){
+         var newdiv = document.createElement('div');
+         switch(inputType) {
+              case 'text':
+                   newdiv.innerHTML = "Entry " + (counterText + 1) + " <br><input type='text' name='myInputs[]'>";
+                   counterText++;
+                   break;
+              case 'radio':
+                   newdiv.innerHTML = "Entry " + (counterRadioButton + 1) + " <br><input type='radio' name='myRadioButtons[]'>";
+                   counterRadioButton++;
+                   break;
+              case 'checkbox':
+                   newdiv.innerHTML = "Entry " + (counterCheckBox + 1) + " <br><input type='checkbox' name='myCheckBoxes[]'>";
+                   counterCheckBox++;
+                   break;
+              case 'textarea':
+               newdiv.innerHTML = "Entry " + (counterTextArea + 1) + " <br><textarea name='myTextAreas[]'>type here...</textarea>";
+                   counterTextArea++;
+                   break;
+              }
+         document.getElementById(divName).appendChild(newdiv);
+    }
+    </script>
+   
 
 </body>
 
