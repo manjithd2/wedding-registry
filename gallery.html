@@ -31,6 +31,21 @@
     		width: 165px;
     	}
 
+      footer{
+        position: fixed;
+        width: 100%;
+        background: rgba(255,255,255,0.8);
+        top: 92%;
+        padding-bottom: 100px;
+      }
+
+      footer h3{
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 15px;
+        font-family: "Playfair Display", serif;
+      }
+
     </style>
 </head>
 <body>
@@ -51,23 +66,27 @@
     
   </div>
 
-  <div class="all-photo">
-        <div id="gal1">
-          <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/1.jpg">
-          <img src="images/festember/2.jpg" width="400" data-fullsrc ="images/festember/2.jpg">
-          <img src="images/festember/3.jpg" width="400" data-fullsrc ="images/festember/3.jpg">
-          <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/4.jpg">
-          <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/1.jpg">
-          <img src="images/festember/2.jpg" width="400" data-fullsrc ="images/festember/2.jpg">
-          <img src="images/festember/3.jpg" width="400" data-fullsrc ="images/festember/3.jpg">
-          <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/4.jpg">
-        </div>
-                         
-      <script type="text/javascript">
-        $('#gal1').galereya();
-      </script>
-    </div>
+  <div class="container">
+    <div class="all-photo">
+          <div id="gal1">
+            <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/1.jpg">
+            <img src="images/festember/2.jpg" width="400" data-fullsrc ="images/festember/2.jpg">
+            <img src="images/festember/3.jpg" width="400" data-fullsrc ="images/festember/3.jpg">
+            <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/4.jpg">
+            <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/1.jpg">
+            <img src="images/festember/2.jpg" width="400" data-fullsrc ="images/festember/2.jpg">
+            <img src="images/festember/3.jpg" width="400" data-fullsrc ="images/festember/3.jpg">
+            <img src="images/festember/1.jpg" width="400" data-fullsrc ="images/festember/4.jpg">
+           
+          </div>   
 
+      </div>
+  </div>
+    
+  <footer>
+    <h3>Made with ♥ <a href="#">that1card.in</a></h3>
+  </footer>
+ 
   <div class="popup rsvp" id="rsvp-1" style="overflow: scroll;">
               <img src="img/decor-1.png" >
             <h2>RSVP</h2> 
@@ -120,6 +139,12 @@
             </form>
   </div>
 
+
+
+
+ <script type="text/javascript">
+          $('#gal1').galereya();
+        </script>
 <script type="text/javascript">
   $ = function(id) {
     return document.getElementById(id);
